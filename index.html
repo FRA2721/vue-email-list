@@ -10,13 +10,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- /css -->
+    <!-- importing-links-section -->
+        <!-- css -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- /css -->
 
-    <!-- vue -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- /vue -->
+        <!-- vue -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!-- /vue -->
+
+        <!-- axios -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+        <!-- /axios -->
+    <!-- /importing-links-section -->
 
     <!-- title -->
     <title>Vue Email List</title>
@@ -26,6 +32,27 @@
 
 <body>
     
+    <!-- header -->
+    <header>
+        <h1>Generator for email</h1>
+    </header>
+    <!-- /header -->
+
+    <!-- main -->
+    <main>
+        <div class="container" id="root">
+
+            <!-- emails-list -->
+            <ul>
+                <li v-for="(emails) in emailsArray" v-if="emailsArray.length > 0">{{ emails }}</li>
+                <div class="email-waiting-room" v-else>Wait a moment please, the emails are generating...</div>
+            </ul>
+            <!-- /emails-list -->
+
+        </div>
+    </main>
+    <!-- /main -->
+
     <!-- js -->
     <script src="js/script.js"></script>
     <!-- /js -->
